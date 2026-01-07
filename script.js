@@ -12,25 +12,20 @@ let maxlabel = document.getElementById("maxlabel");
 let gap = 100;
 
 minrange.addEventListener("input", ()=> {
-    // Kiểm tra xem hai thằng thumb có trùng hoặc khoảng cách quá gần nhau không
     if (maxrange.value - minrange.value < gap) {
         minrange.value = maxrange.value - gap;
     }
-    // Cập nhật thông tin lên hai ô
     minprice.textContent = minrange.value;
     maxprice.textContent = maxrange.value;
 
     // Tính khoảng cách cho thumb đầu
     let dau = (minrange.value / 6000) * 100;
     // Tính độ dài giữa hai thumb
-    let width = ((maxrange.value - minrange.value)/6000) * 100;
+    let width = ((maxrange.value - minrange.value) / 6000) * 100;
     // Cập nhật cho thanh độ dài (màu đỏ); cộng cho % là vì muốn left = x% của thanh input --> chính xác hơn px
     dodai.style.left = dau + "%";
-    // Cập nhật độ dài
     dodai.style.width = width + "%";
 
-
-    // Cách tính vị trí của hai label cũng tương tự hai thumb
     minlabel.textContent = "$" + minrange.value;
     maxlabel.textContent = "$" + maxrange.value;
 
@@ -40,7 +35,8 @@ minrange.addEventListener("input", ()=> {
 
 maxrange.addEventListener("input", ()=> {
     if (maxrange.value - minrange.value < gap) {
-        // maxrange.value = Number(minrange.value) + gap; --> Lí do ép kiểu vì trong JS phép cộng sẽ ưu tiên cộng chuỗi hơn là tự hiểu việc cộng số nên phải ép kiểu
+        maxrange.value = Number(minrange.value) + gap; 
+        // --> Lí do ép kiểu vì trong JS phép cộng sẽ ưu tiên cộng chuỗi hơn là tự hiểu việc cộng số nên phải ép kiểu
     }
     maxprice.textContent = maxrange.value;
     minprice.textContent = minrange.value;
