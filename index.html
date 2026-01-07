@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Baloo+Thambi+2:wght@400..800&family=Diplomata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Price range slider</title>
+</head>
+<body>
+    <div class="box">
+        <div class="title">Price Range Slider</div>
+        <div class="value">
+            <div class="wrap">
+                <div class="dau"></div>
+                <div class="dodai" id="dodai"></div>
+                <input type="range" class="range-min" min="0" max="6000"step="10" value="700" id="minrange">
+                <div class="label" id="minlabel">$700</div>
+                <input type="range" class="range-max" min="0" max="6000" step="10" value="3000" id="maxrange">
+                <div class="label" id="maxlabel">$3000</div>
+                
+            </div>
+        </div>
+        <div class="display">
+            <div class="minprice">
+                <div class="o1">$</div>
+                <div class="o2" id="minprice">700</div>
+            </div>
+            <div class="minprice">
+                <div class="o1">$</div>
+                <div class="o2" id="maxprice">3000</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
