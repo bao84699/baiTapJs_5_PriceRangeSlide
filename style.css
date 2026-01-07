@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 300px;
+    padding-top: 200px;
     font-family: "Outfit";
 }
 
@@ -27,6 +27,7 @@ body {
     .title {
         font-weight: 700;
         font-size: 40px;
+        margin-bottom: 30px;
     }
     .value{
         display: flex;
